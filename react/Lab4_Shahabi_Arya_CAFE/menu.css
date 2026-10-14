@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4eee8;
+    margin: 0;
+    padding: 40px 20px;
+    color: #4a3025;
+}
+
+
+/* Whole menu card */
+.menu {
+    width: 88%;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Header */
+header {
+    background-color: #5a3423;
+    color: white;
+    padding: 24px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+
+/* Item count */
+.count {
+    background-color: #d8b382;
+    color: #4a3025;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* Each menu item */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 20px;
+    border-top: 1px solid #e6ddd5;
+}
+
+
+/* Name + description area */
+.item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* Item name */
+.item-name {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/* Description */
+.item-desc {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Vegetarian badge */
+.badge-veg {
+    background-color: #d7eee1;
+    color: #28704b;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 3px 5px;
+    margin-left: 7px;
+
+    border-radius: 4px;
+}
+
+
+/* Price */
+.price {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/* SOLD OUT badge */
+.sold-out {
+    background-color: #f4d5d2;
+    color: #a3433b;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+
+/* Grey + strike sold-out item's text */
+.is-sold-out .item-name,
+.is-sold-out .item-desc {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+    color: #777;
+    background-color: #faf7f3;
+}

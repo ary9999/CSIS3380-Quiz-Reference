@@ -1,0 +1,97 @@
+//- ----------------------------------------------------
+//- PUG QUICK REFERENCE
+//-
+//- .container       = <div class="container">
+//- #main            = id="main"
+//- p= value         = display a variable
+//- #{value}         = variable inside normal text
+//- if / else        = conditional
+//- each item in arr = loop through array
+//- ----------------------------------------------------
+
+doctype html
+html(lang="en")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    //- CHANGE page title if needed
+    title Name List
+
+    //- Usually KEEP this the same
+    link(rel="stylesheet", href="/static/style.css")
+
+
+  body
+
+    .container
+
+      //- CHANGE heading depending on quiz
+      h1 Name List
+
+
+      //- ------------------------------------------------
+      //- FORM
+      //-
+      //- CHANGE action to match app.post(...)
+      //
+      //- app.js:
+      //- app.post('/add', ...)
+      //
+      //- Pug:
+      //- form(action="/add")
+      //- ------------------------------------------------
+      form(action="/add", method="POST")
+
+        //- CHANGE label text
+        label(for="name") Enter your name:
+
+        //- CHANGE:
+        //- name="name"
+        //- id="name"
+        //-
+        //- IMPORTANT:
+        //- name="name" connects to:
+        //- req.body.name
+        input(
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter a name"
+          required
+        )
+
+        //- CHANGE button text if needed
+        button(type="submit") Add Name
+
+
+      //- ------------------------------------------------
+      //- DISPLAY ARRAY
+      //-
+      //- Change "names" if your array changes.
+      //
+      //- Example:
+      //- each student in students
+      //- each product in products
+      //- ------------------------------------------------
+
+      h2 Names
+
+
+      //- Only show list if array has items
+      if names.length > 0
+
+        ul
+
+          //- LOOP through array
+          each name in names
+
+            //- Display each item
+            li= name
+
+
+      //- Runs when array is empty
+      else
+
+        p.empty No names added yet.
